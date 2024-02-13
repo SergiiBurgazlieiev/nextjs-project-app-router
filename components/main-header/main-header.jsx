@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 // Internal modules
 import logoImg from '@/assets/logo.png';
+import NavLink from '../nav-link/nav-link';
 import styles from './main-header.module.css';
 import MainHeaderBackground from '../main-header-background/main-header-background';
 
@@ -19,10 +20,10 @@ const MainHeader = () => {
 				<nav className={styles.nav}>
 					<ul>
 						<li>
-							<Link href='/meals'>Browse Meals</Link>
+							<NavLink href='/meals'>Browse Meals</NavLink>
 						</li>
 						<li>
-							<Link href='/community'>Foodie Community</Link>
+							<NavLink href='/community'>Foodie Community</NavLink>
 						</li>
 					</ul>
 				</nav>
