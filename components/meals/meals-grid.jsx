@@ -6,7 +6,7 @@ const MealsGrid = ({ meals }) => {
 		<ul className={styles.grid}>
 			{meals.map(meal => (
 				<li key={meal.id}>
-					<MealItem {...meals} />
+					<MealItem {...meal} />
 				</li>
 			))}
 		</ul>
