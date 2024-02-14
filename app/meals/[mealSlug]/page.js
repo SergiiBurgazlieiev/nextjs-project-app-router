@@ -6,7 +6,7 @@ import { getMeal } from '@/lib/meals';
 import { AWSS3PublicURL } from '@/lib/constants';
 
 const MealDetailsPage = ({ params }) => {
-	const meal = getMeal(params.slug);
+	const meal = getMeal(params.mealSlug);
 
 	if (!meal) {
 		notFound();
@@ -35,8 +35,7 @@ const MealDetailsPage = ({ params }) => {
 					users to prevent XSS attacks. But I know it is not 
 					recommended to use.
 					*/
-					dangerouslySetInnerHTML={{ __html: meal.instructions }}
-				/>
+					dangerouslySetInnerHTML={{ __html: meal.instructions }}></p>
 			</main>
 		</>
 	);

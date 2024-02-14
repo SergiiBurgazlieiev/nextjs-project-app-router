@@ -5,10 +5,14 @@ import { getMeals } from '@/lib/meals';
 import MealsGrid from '@/components/meals/meals-grid';
 import styles from './page.module.css';
 
+export const metadata = {
+	title: 'All Meals',
+	description: 'Browse the delicious meals shared by our vibrant community.'
+};
+
 const Meals = () => {
 	// Get list of meals
 	const meals = getMeals();
-
 	return <MealsGrid meals={meals} />;
 };
 
