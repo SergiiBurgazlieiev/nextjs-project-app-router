@@ -30,7 +30,13 @@ const MealDetailsPage = ({ params }) => {
 			<main>
 				<p
 					className={styles.instructions}
-					dangerouslySetInnerHTML={{ __html: meal.instructions }}></p>
+					/*
+					I am going use xss module to filter input from 
+					users to prevent XSS attacks. But I know it is not 
+					recommended to use.
+					*/
+					dangerouslySetInnerHTML={{ __html: meal.instructions }}
+				/>
 			</main>
 		</>
 	);
