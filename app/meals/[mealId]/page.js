@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 
 import styles from './page.module.css';
 import { getMeal } from '@/lib/meals';
+import { AWSS3PublicURL } from '@/lib/constants';
 
 const MealDetailsPage = ({ params }) => {
 	const meal = getMeal(params.mealId);
@@ -16,7 +17,7 @@ const MealDetailsPage = ({ params }) => {
 		<>
 			<header className={styles.header}>
 				<div className={styles.image}>
-					<Image src={meal.image} alt={meal.title} fill />
+					<Image src={`${AWSS3PublicURL}${meal.image}`} alt={meal.title} fill />
 				</div>
 				<div className={styles.headerText}>
 					<h1>{meal.title}</h1>

@@ -2,13 +2,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import styles from './meal-item.module.css';
+import { AWSS3PublicURL } from '@/lib/constants';
 
 const MealItem = ({ title, slug, image, summary, creator }) => {
 	return (
 		<article className={styles.item}>
 			<header>
 				<div className={styles.image}>
-					<Image src={image} alt={title} fill />
+					<Image src={`${AWSS3PublicURL}${image}`} alt={title} fill />
 				</div>
 				<div className={styles.headerText}>
 					<h2>{title}</h2>
