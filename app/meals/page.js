@@ -5,9 +5,9 @@ import { getMeals } from '@/lib/meals';
 import MealsGrid from '@/components/meals/meals-grid';
 import styles from './page.module.css';
 
-const Meals = async () => {
+const Meals = () => {
 	// Get list of meals
-	const meals = await getMeals();
+	const meals = getMeals();
 
 	return <MealsGrid meals={meals} />;
 };

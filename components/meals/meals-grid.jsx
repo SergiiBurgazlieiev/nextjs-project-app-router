@@ -6,7 +6,13 @@ const MealsGrid = ({ meals }) => {
 		<ul className={styles.grid}>
 			{meals.map(meal => (
 				<li key={meal.id}>
-					<MealItem {...meal} />
+					<MealItem
+						title={meal.title}
+						slug={meal.slug}
+						image={meal.image}
+						summary={meal.summary}
+						creator={meal.creator}
+					/>
 				</li>
 			))}
 		</ul>
