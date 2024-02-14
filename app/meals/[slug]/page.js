@@ -6,7 +6,7 @@ import { getMeal } from '@/lib/meals';
 import { AWSS3PublicURL } from '@/lib/constants';
 
 const MealDetailsPage = ({ params }) => {
-	const meal = getMeal(params.mealId);
+	const meal = getMeal(params.slug);
 
 	if (!meal) {
 		notFound();
