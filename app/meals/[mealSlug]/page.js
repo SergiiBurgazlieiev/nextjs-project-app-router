@@ -5,13 +5,13 @@ import styles from './page.module.css';
 import { getMeal } from '@/lib/meals';
 import { AWSS3PublicURL } from '@/lib/constants';
 
-const MealDetailsPage = ({ params }) => {
-	const meal = getMeal(params.mealSlug);
+const MealDetailsPage = async ({ params }) => {
+	const meal = await getMeal(params.mealSlug);
 
 	if (!meal) {
 		notFound();
 	}
-	meal.instructions = meal.instructions.replace(/\n/g, '<br/>');
+	meal.instructions = meal?.instructions.replace(/\n/g, '<br/>');
 
 	return (
 		<>

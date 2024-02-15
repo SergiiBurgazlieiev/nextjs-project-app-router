@@ -4,8 +4,8 @@ import MealItem from './meal-item';
 const MealsGrid = ({ meals }) => {
 	return (
 		<ul className={styles.grid}>
-			{meals.map(meal => (
-				<li key={meal.id}>
+			{meals?.map(meal => (
+				<li key={meal._id}>
 					<MealItem
 						title={meal.title}
 						slug={meal.slug}
