@@ -1,9 +1,14 @@
-Foodie App with Next.js
+## Foodie App with Next.js
 
-The project was developed using [Next.js](https://nextjs.org/) with the app router pattern, leveraging the file system for setting up routes, including special file names such as page, error, and etc. It also incorporated dynamic routes for loading individual meal pages.
+Welcome to the Foodie App! This project was developed using Next.js, a powerful React framework, to provide a seamless browsing experience for food enthusiasts. Below you'll find an overview of the project structure, key features, and technologies used.
 
-The majority of components were rendered on the server side, except for those utilizing the `'use client'` directive. Server-side rendering (SSR) facilitated data fetching directly within server components. Server actions were employed and assigned directly to form `action` prop.
+## Features
 
-Notably, [Next.js](https://nextjs.org/) employs aggressive [caching](https://nextjs.org/docs/app/building-your-application/caching), prompting the use of the [revaalidatePath](https://nextjs.org/docs/app/api-reference/functions/revalidatePath) function to ensure the latest data is displayed on the meals page in production mode.
+- **App Router Pattern**: Leveraging [Next.js](https://nextjs.org/), the project utilizes the file system for setting up routes, including dynamic routes for loading individual meal pages, etc.
+- **Server-Side Rendering (SSR)**: The majority of components are rendered on the server side, enhancing performance and facilitating direct data fetching within server components, unless `'use client'` directive is used.
 
-Additionally, the project utilized [AWS S3](https://nextjs.org/docs/app/building-your-application/optimizing/images#remote-images) technology for storing images.
+## Technologies Used
+
+- [Next.js](https://nextjs.org/): The core framework for building the application.
+- [AWC S3](https://aws.amazon.com/s3/): Integrated for efficient image storage and retrieval.
+- [MongoDB Atlas](https://www.mongodb.com/atlas): Integrated to store meals data securely and efficiently.
